@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Balsamiq Sans";
+  src: url("./BalsamiqSans-Bold.ttf") format("truetype");
+  font-weight: 350; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grandstander";
+  src: url("./Grandstander.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}

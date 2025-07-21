@@ -1,0 +1,38 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px;
+  font-size: 18px;
+}
+.footer-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-nav a {
+  position: relative;
+  padding: 0 10px;
+  color: black;
+  font-family: "Grandstander, sans-serif";
+  font-weight: 500;
+  line-height: "120%";
+  align-items: "center";
+}
+
+.footer-nav a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -12px;
+  color: black;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.group-icons {
+  display: flex;
+  gap: 20px;
+}

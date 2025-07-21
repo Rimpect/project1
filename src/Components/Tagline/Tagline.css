@@ -1,0 +1,8 @@
+@import "../../assets/fonts/fonts.css";
+.tagline {
+  color: #f76c03;
+  font-size: 50px;
+  font-family: "Balsamiq Sans", sans-serif;
+  text-shadow: 3px 3px 0 black;
+  padding: 30px 30px;
+}
