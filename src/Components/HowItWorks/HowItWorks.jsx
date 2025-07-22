@@ -1,7 +1,5 @@
 import React from "react";
-import image1 from "../../img/icons/111.png";
-import image2 from "../../img/icons/222.png";
-import image3 from "../../img/icons/333.png";
+
 
 import "./HowItWorks.css";
 export default function HowItWorks() {
@@ -11,9 +9,9 @@ export default function HowItWorks() {
       <div className="container">
         {/* Верхняя линия с 3 картинками */}
         <div className="image-line">
-          <img src={image1} alt="Image 1" className="image-left" />
-          <img src={image2} alt="Image 2" className="image-center" />
-          <img src={image3} alt="Image 3" className="image-right" />
+          <img src="/src/img/elements/FirstPolygon.png" alt="Многоугольник1" />
+          <img src="/src/img/elements/TwoPolygon.png" alt="Многоугольник2" />
+          <img src="/src/img/elements/ThreePolygon.png" alt="Многоугольник3" />
         </div>
 
         {/* Нижняя линия с 3 текстами */}

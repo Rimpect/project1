@@ -1,6 +1,6 @@
 import React from "react";
 import "./Stats.css";
-import buttonImage from "../../img/icons/ButtonOrange.png";
+
 export default function Stats() {
   return (
     <div>
@@ -16,11 +16,8 @@ export default function Stats() {
       <div className="action-button">
         {" "}
         <button className="hero-button">
-          <img
-            src={buttonImage}
-            alt="Button background"
-            className="button-bg"
-          />
+          <img src="/src/img/elements/OrangeButton.png" alt="Кнопка" />
+          <span className="button-text-stats">BUY HERE</span>
         </button>
       </div>
     </div>

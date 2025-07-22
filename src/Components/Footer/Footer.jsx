@@ -1,21 +1,17 @@
 import React from "react";
 import "./Footer.css";
-import BlackLogo from "../../img/icons/BlackLogo.png";
-import TelegrammIcon from "../../img/icons/TelegrammIcon.png";
-import XIcon from "../../img/icons/XIcon.png";
-import Logo1Icon from "../../img/icons/Logo1Icon.png";
-import Logo2Icon from "../../img/icons/Logo2Icon.png";
+
 export default function Footer() {
   return (
     <div className="footer-container">
       <div className="BlackLogo">
-        <img src={BlackLogo} alt="Иконка" />
+        <img src="/src/img/icons/BlackLogo.png" alt="Логотип" />
       </div>
       <div className="group-icons">
-        <img src={TelegrammIcon} alt="Иконка" />
-        <img src={XIcon} alt="Иконка" />
-        <img src={Logo1Icon} alt="Иконка" />
-        <img src={Logo2Icon} alt="Иконка" />
+        <img src="/src/img/icons/TelegrammIcon.png" alt="Telegram Icon" />
+        <img src="/src/img/icons/XIcon.png" alt="X Icon" />
+        <img src="/src/img/icons/Logo1Icon.png" alt="Logo 1 Icon" />
+        <img src="/src/img/icons/Logo2Icon.png" alt="Logo 2 Icon" />
       </div>
       <div>
         <nav className="footer-nav">

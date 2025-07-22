@@ -1,23 +1,30 @@
-@import "../../assets/fonts/fonts.css";
-.container {
-  /* background-color: orange; */
-  text-align: left;
+.hero-section-container {
   padding: 45px 45px;
+  text-align: left;
+  margin-left: 71px;
+  margin-bottom: 87px;
+  margin-right: 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .text-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
   gap: 20px;
-  padding: 45px 0px;
   line-height: 1.5;
   font-size: 16px;
-  font-family: "Balsamiq Sans", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
+  color: black;
 }
-
+.text-part img {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 .text-part:first-child {
   grid-column: 1;
+  margin-bottom: 63px;
 }
 
 .text-part:nth-child(2) {
@@ -33,42 +40,35 @@
 
 .hero-button {
   position: relative;
-  overflow: hidden;
   border: none;
   padding: 0;
   cursor: pointer;
+  overflow: visible;
   width: 250px;
   height: 60px;
-  margin-top: 30px;
   background: transparent;
-  display: flex;
-  align-items: flex-start;
+  align-items: start;
+  
 }
 
 .button-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
-
 .button-text {
-  padding: 30px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   z-index: 2;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   color: black;
-}
-
-.hero-button:hover .button-bg {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+  font-weight: bold;
+  pointer-events: none;
 }

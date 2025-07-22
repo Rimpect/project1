@@ -1,11 +1,10 @@
 import React from "react";
-import LogoIcon from "../../img/icons/Vector.png";
 import "./Header.css";
 export default function Header() {
   return (
     <div className="header-container">
       <div className="logo">
-        <img src={LogoIcon} alt="Иконка" />
+        <img src="/src/img/icons/WhiteLogo.png" alt="Логотип" />
       </div>
       <div>
         <nav className="header-nav">
