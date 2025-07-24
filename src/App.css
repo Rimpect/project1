@@ -63,3 +63,8 @@
 a {
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .hero-container {
+    background-image: url("./img/elements/BackgroundMobile.png");
+  }
+}
