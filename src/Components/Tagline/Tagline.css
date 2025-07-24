@@ -1,15 +1,16 @@
 .tagline {
   grid-area: tagline;
-  height: 80px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  font-weight: 400;
   color: #f76c03;
-  font-size: 32px;
+  font-size: 50px;
   line-height: 1.2;
-  text-shadow: 3px 3px 0 black;
-  margin: 0;
+  text-shadow: 2px 2px 0 #1f002a;
+  margin-top: 80px;
+  margin-bottom: 136px;
   padding: 0;
+  -webkit-text-stroke: 0.8px black;
 }

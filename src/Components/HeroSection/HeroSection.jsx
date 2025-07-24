@@ -1,31 +1,41 @@
 import React from "react";
 import "./HeroSection.css";
+
 export default function HeroSection() {
   return (
     <div className="hero-section-container">
       <div className="heading-text">
-        FIRST EVER MINABLE<br /> MEMECOIN
+        FIRST EVER MINABLE
+        <br /> MEMECOIN
       </div>
 
-      {/* Тексты остались, как есть */}
       <div className="text-container">
         <div className="text-part">
           <div>
-            <img src="/src/img/elements/VectorOrangeBackground.png" />
+            <img
+              src="/src/img/elements/VectorOrangeBackground.png"
+              alt="Icon"
+            />
           </div>
-          $KeyCN breaks the meme coin<br /> mold by empowering miners to
-          <br /> secure its token supply, combining<br /> fun with
-          functionality.
+          $KeyCN breaks the meme coin
+          <br /> mold by empowering miners to
+          <br /> secure its token supply, combining
+          <br /> fun with functionality.
         </div>
 
         <div className="text-part">
           <div>
-            <img src="/src/img/elements/VectorOrangeBackground.png" />
+            <img
+              src="/src/img/elements/VectorOrangeBackground.png"
+              alt="Icon"
+            />
           </div>
-          Unlike other meme coins, $KeyCN<br /> integrates miners into its
-          ecosystem,<br />
-          ensuring stability and long-term value.<br /> It’s not just a
-          meme—it’s a movement<br /> in the crypto world.
+          Unlike other meme coins, $KeyCN
+          <br /> integrates miners into its ecosystem,
+          <br />
+          ensuring stability and long-term value.
+          <br /> It’s not just a meme—it’s a movement
+          <br /> in the crypto world.
         </div>
       </div>
 

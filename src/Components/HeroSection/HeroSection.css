@@ -1,27 +1,28 @@
 .hero-section-container {
-  padding: 45px 45px;
+  padding: 45px;
   text-align: left;
-  margin-left: 71px;
-  margin-bottom: 87px;
-  margin-right: 78px;
+  margin: 50px 78px 87px 71px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .text-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   align-items: baseline;
   gap: 20px;
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
   color: black;
+  text-align: left;
 }
+
 .text-part img {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
+
 .text-part:first-child {
   grid-column: 1;
   margin-bottom: 63px;
@@ -30,45 +31,89 @@
 .text-part:nth-child(2) {
   grid-column: 2;
 }
+
 .heading-text {
   color: #ffffff;
   font-size: 80px;
-  font-family: "Balsamiq Sans", sans-serif;
   text-shadow: 5px 5px 0 black;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .hero-button {
   position: relative;
   border: none;
   padding: 0;
+  margin: 0;
   cursor: pointer;
-  overflow: visible;
-  width: 250px;
-  height: 60px;
+  overflow: hidden;
+  width: 175px;
+  height: 58px;
   background: transparent;
+  display: flex;
   align-items: start;
-  
+  outline: none;
+  align-self: flex-start;
 }
 
 .button-bg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  pointer-events: none;
 }
+
 .button-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   z-index: 2;
   font-size: 18px;
   color: black;
   font-weight: bold;
   pointer-events: none;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section-container {
+    margin: 30px 20px;
+    padding: 25px;
+    align-items: flex-start;
+    text-align: left; 
+  }
+
+  .heading-text {
+    font-size: 50px;
+    text-align: left;
+    width: 100%; 
+    padding-left: 0; 
+    margin-left: 0;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%; 
+    padding-left: 0;
+  }
+
+  .text-part {
+    margin-bottom: 0 !important;
+    width: 100%;
+  }
+
+  .hero-button {
+    align-self: center; 
+    margin-top: 30px;
+    margin-left: 0; 
+  }
 }

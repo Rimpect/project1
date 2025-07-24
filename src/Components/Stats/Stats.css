@@ -1,49 +1,126 @@
-@import "../../assets/fonts/fonts.css";
 .container-stats {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* 1/3 слева, 2/3 справа */
+  grid-template-columns: 1fr 2fr;
   gap: 30px;
   text-align: left;
   padding: 45px 45px;
+  position: relative;
 }
+
 .text-container-stats {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Расстояние между текстовыми блоками */
+  gap: 15px;
 }
-.action-button {
-  align-items: center; /* Выравнивание кнопки по левому краю */
 
-  margin-top: 20px;
-}
 .text-word {
   color: #ffffff;
   font-size: 50px;
-  font-family: "Balsamiq Sans", sans-serif;
   -webkit-text-stroke: 1px black;
-  /* выше? */
   text-shadow: 1px 1px 0 black;
+  margin-bottom: 20px;
 }
+
 .text-value {
   color: black;
   font-size: 50px;
-  font-family: "Balsamiq Sans", sans-serif;
   font-weight: 150;
+  margin-bottom: 60px;
 }
+
 .action-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-text-stats {
+  z-index: 2;
+  font-size: 25px;
+  color: white;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.stats-button {
+  position: relative;
+  width: 195px;
+  height: 62px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.stats-button img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.diogram {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.button-text-stats {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
-  z-index: 2;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  pointer-events: none;
+.diogram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .container-stats {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    position: static;
+  }
+
+  .text-word,
+  .text-value {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .text-value {
+    margin-bottom: 30px;
+  }
+
+  .action-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .diogram {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  .text-container-stats {
+    order: 1;
+  }
+
+  .action-button {
+    position: static;
+    transform: none;
+    order: 3;
+    margin: 30px auto;
+    width: auto;
+  }
 }
