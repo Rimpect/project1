@@ -5,9 +5,9 @@ export default function Stats() {
   return (
     <div className="container-stats">
       <div className="text-container-stats">
-        <div className="text-word">Total supply:</div>
+        <div className="text-word">Total Supply:</div>
         <div className="text-value">20,369,349,000,000</div>
-        <div className="text-word">$KeyCN price:</div>
+        <div className="text-word">$KeyCN Price:</div>
         <div className="text-value">$4.20</div>
       </div>
       <div className="diogram">

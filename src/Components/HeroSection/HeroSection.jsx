@@ -11,7 +11,7 @@ export default function HeroSection() {
 
       <div className="text-container">
         <div className="text-part">
-          <div>
+          <div className="icon-container">
             <img
               src="/src/img/elements/VectorOrangeBackground.png"
               alt="Icon"
@@ -24,7 +24,7 @@ export default function HeroSection() {
         </div>
 
         <div className="text-part">
-          <div>
+          <div className="icon-container">
             <img
               src="/src/img/elements/VectorOrangeBackground.png"
               alt="Icon"
@@ -34,7 +34,7 @@ export default function HeroSection() {
           <br /> integrates miners into its ecosystem,
           <br />
           ensuring stability and long-term value.
-          <br /> It’s not just a meme—it’s a movement
+          <br /> It's not just a meme—it's a movement
           <br /> in the crypto world.
         </div>
       </div>

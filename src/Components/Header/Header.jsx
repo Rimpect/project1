@@ -8,6 +8,20 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    setMenuOpen(false); 
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <>
       <div className="header-container">
@@ -16,11 +30,11 @@ export default function Header() {
         </div>
 
         <nav className="header-nav">
-          <a href="/about">About</a>
-          <a href="/tokenomics">Tokenomics</a>
-          <a href="/presale">Presale</a>
-          <a href="/dao">DAO</a>
-          <a href="/roadmap">Roadmap</a>
+          <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
+          <a href="#tokenomics" onClick={(e) => handleSmoothScroll(e, "tokenomics")}>Tokenomics</a>
+          <a href="#presale" onClick={(e) => handleSmoothScroll(e, "presale")}>Presale</a>
+          <a href="#dao">DAO</a>
+          <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>Roadmap</a>
         </nav>
 
         <div className="burger-menu" onClick={toggleMenu}>
@@ -29,24 +43,12 @@ export default function Header() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-        <div className="close-btn" onClick={toggleMenu}>
-          ×
-        </div>
-        <a href="/about" onClick={toggleMenu}>
-          About
-        </a>
-        <a href="/tokenomics" onClick={toggleMenu}>
-          Tokenomics
-        </a>
-        <a href="/presale" onClick={toggleMenu}>
-          Presale
-        </a>
-        <a href="/dao" onClick={toggleMenu}>
-          DAO
-        </a>
-        <a href="/roadmap" onClick={toggleMenu}>
-          Roadmap
-        </a>
+        <div className="close-btn" onClick={toggleMenu}>×</div>
+        <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
+        <a href="#tokenomics" onClick={(e) => handleSmoothScroll(e, "tokenomics")}>Tokenomics</a>
+        <a href="#presale" onClick={(e) => handleSmoothScroll(e, "presale")}>Presale</a>
+        <a href="#dao">DAO</a>
+        <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>Roadmap</a>
       </div>
     </>
   );

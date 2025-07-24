@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import HeroSection from "./Components/HeroSection/HeroSection";
@@ -11,14 +10,26 @@ import Tagline from "./Components/Tagline/Tagline";
 function App() {
   return (
     <div className="app-grid">
-      <div className="hero-container">
-        <Header className="app-header" />
-        <HeroSection className="app-hero" />
-      </div>
-      <Stats className="app-stats" />
-      <HowItWorks className="app-how-it-works" />
-      <Tagline className="app-tagline" />
-      <Footer className="app-footer" />
+ 
+      <section id="about" className="hero-container">
+        <Header />
+        
+        <HeroSection/>
+      </section>
+
+      <section id="presale" className="app-stats">
+        <Stats />
+      </section>
+
+      <section id="roadmap" className="app-how-it-works">
+        <HowItWorks />
+      </section>
+
+      <section className="app-tagline">
+        <Tagline />
+      </section>
+
+      <Footer />
     </div>
   );
 }

@@ -4,12 +4,13 @@
   justify-content: space-between;
   padding: 25px;
   font-size: 18px;
-  margin: 47px 20px 50px;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .logo {
-  margin-right: 20px;
+  margin-top: 47px;
+  margin-left: 50px;
 }
 
 .logo img {
@@ -25,6 +26,11 @@
 .header-nav {
   display: flex;
   gap: 30px;
+  margin-top: 67px;
+  margin-right: 45px;
+ -webkit-text-stroke: 0.2px black;
+  text-shadow: 1px 1px 0 #1f002a;
+
 }
 
 .header-nav a {
