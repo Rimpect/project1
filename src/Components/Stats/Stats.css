@@ -1,7 +1,6 @@
 .container-stats {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 30px;
   text-align: left;
   padding: 45px 45px;
   position: relative;
@@ -78,18 +77,22 @@
   align-items: center;
 }
 
-.diogram img {  
+.diogram img {
   width: 90%;
   height: 90%;
   object-fit: contain;
 }
 
-/* Мобильная версия */
 @media (max-width: 768px) {
   .container-stats {
     grid-template-columns: 1fr;
     padding: 25px;
     position: static;
+  }
+  .diogram img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .text-word,

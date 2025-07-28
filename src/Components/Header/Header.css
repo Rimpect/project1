@@ -1,15 +1,20 @@
 .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  /* padding: 25px; */
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
 }
 
 .logo {
-  margin-top: 47px;
+  margin-top: 30px;
   margin-left: 50px;
 }
 
@@ -26,11 +31,10 @@
 .header-nav {
   display: flex;
   gap: 30px;
-  margin-top: 67px;
+  margin-top: 0px;
   margin-right: 45px;
- -webkit-text-stroke: 0.2px black;
+  -webkit-text-stroke: 0.2px black;
   text-shadow: 1px 1px 0 #1f002a;
-
 }
 
 .header-nav a {
@@ -90,11 +94,9 @@
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
   .header-container {
     padding: 15px;
-    margin: 20px 15px;
   }
 
   .header-nav {

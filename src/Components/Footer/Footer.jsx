@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
+    setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const headerHeight = document.querySelector('.header-container')?.offsetHeight || 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      
+      const offset = 80;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
-        top: elementPosition - headerHeight,
-        behavior: "smooth"
+        top: elementPosition - offset,
+        behavior: "smooth",
       });
     }
   };
@@ -20,7 +28,7 @@ export default function Footer() {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -29,22 +37,34 @@ export default function Footer() {
       <div className="BlackLogo">
         <img src="/src/img/icons/BlackLogo.png" alt="Логотип" />
       </div>
-      
+
       <div className="group-icons">
         <img src="/src/img/icons/TelegrammIcon.png" alt="Telegram Icon" />
         <img src="/src/img/icons/XIcon.png" alt="X Icon" />
         <img src="/src/img/icons/Logo1Icon.png" alt="Logo 1 Icon" />
         <img src="/src/img/icons/Logo2Icon.png" alt="Logo 2 Icon" />
       </div>
-      
+
       <div className="footer-nav-wrapper">
         <nav className="footer-nav">
-          <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
-          <a href="#tokenomics" onClick={(e) => handleSmoothScroll(e, "tokenomics")}>Tokenomics</a>
-          <a href="#presale" onClick={(e) => handleSmoothScroll(e, "presale")}>Presale</a>
-          <a href="#dao">DAO</a>
-          <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>Roadmap</a>
-          <a href="#about" onClick={scrollToTop}>Up</a>
+          <Link to="/about" onClick={toggleMenu}>
+            About
+          </Link>
+          <Link to="/tokenomics" onClick={toggleMenu}>
+            Tokenomics
+          </Link>
+          <Link to="/#" onClick={toggleMenu}>
+            Presale
+          </Link>
+          <Link to="/dao" onClick={toggleMenu}>
+            DAO
+          </Link>
+          <Link to="/social" onClick={toggleMenu}>
+            Roadmap
+          </Link>
+          <Link to="/" onClick={scrollToTop}>
+            Up
+          </Link>
         </nav>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -10,14 +10,15 @@ export default function Header() {
 
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
-    setMenuOpen(false); 
+    setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: elementPosition - offset,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -30,11 +31,21 @@ export default function Header() {
         </div>
 
         <nav className="header-nav">
-          <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
-          <a href="#tokenomics" onClick={(e) => handleSmoothScroll(e, "tokenomics")}>Tokenomics</a>
-          <a href="#presale" onClick={(e) => handleSmoothScroll(e, "presale")}>Presale</a>
-          <a href="#dao">DAO</a>
-          <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>Roadmap</a>
+          <Link to="/about" onClick={toggleMenu}>
+            About
+          </Link>
+          <Link to="/tokenomics" onClick={toggleMenu}>
+            Tokenomics
+          </Link>
+          <Link to="/#" onClick={toggleMenu}>
+            Presale
+          </Link>
+          <Link to="/dao" onClick={toggleMenu}>
+            DAO
+          </Link>
+          <Link to="/social" onClick={toggleMenu}>
+            Roadmap
+          </Link>
         </nav>
 
         <div className="burger-menu" onClick={toggleMenu}>
@@ -43,12 +54,24 @@ export default function Header() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-        <div className="close-btn" onClick={toggleMenu}>×</div>
-        <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
-        <a href="#tokenomics" onClick={(e) => handleSmoothScroll(e, "tokenomics")}>Tokenomics</a>
-        <a href="#presale" onClick={(e) => handleSmoothScroll(e, "presale")}>Presale</a>
-        <a href="#dao">DAO</a>
-        <a href="#roadmap" onClick={(e) => handleSmoothScroll(e, "roadmap")}>Roadmap</a>
+        <div className="close-btn" onClick={toggleMenu}>
+          ×
+        </div>
+        <Link to="/about" onClick={toggleMenu}>
+          About
+        </Link>
+        <Link to="/tokenomics" onClick={toggleMenu}>
+          Tokenomics
+        </Link>
+        <Link to="/#" onClick={toggleMenu}>
+          Presale
+        </Link>
+        <Link to="/dao" onClick={toggleMenu}>
+          DAO
+        </Link>
+        <Link to="/social" onClick={toggleMenu}>
+          Roadmap
+        </Link>
       </div>
     </>
   );

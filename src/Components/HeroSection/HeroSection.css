@@ -4,15 +4,13 @@
   margin: 50px 78px 87px 71px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+ 
 }
 
-/* Исходное расположение для больших экранов */
 .text-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: baseline;
-  gap: 20px;
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
@@ -81,7 +79,6 @@
   margin: 0;
 }
 
-/* Для экранов меньше 1600px - немного адаптируем */
 @media (max-width: 1600px) {
   .hero-section-container {
     margin: 50px 60px 70px 60px;
@@ -92,14 +89,12 @@
   }
 }
 
-/* Для экранов меньше 1440px - сдвигаем второй текст правее */
 @media (max-width: 1440px) {
   .text-part:nth-child(2) {
     grid-column: 3;
   }
 }
 
-/* Для экранов меньше 1200px - переходим на flex */
 @media (max-width: 1200px) {
   .text-container {
     display: flex;
@@ -121,7 +116,6 @@
   }
 }
 
-/* Для мобильных устройств */
 @media (max-width: 768px) {
   .hero-section-container {
     margin: 30px 20px;
